@@ -1,6 +1,6 @@
 {
   "replace": false,
   "values": [
-	"uhc:reload"
+  "uhc:init"
 	]
 }

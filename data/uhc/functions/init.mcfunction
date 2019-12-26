@@ -1,15 +1,22 @@
 tellraw @s [{"text": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n"}]
-gamemode spectator @a
-tp @a 0 102 0
-fill -10 100 -10 10 105 10 minecraft:barrier
-fill -9 101 -9 9 105 9 minecraft:air
-fill -9 100 -9 9 100 9 minecraft:light_blue_concrete
-fill -8 100 -8 8 100 8 minecraft:light_blue_stained_glass
-gamemode adventure @a
-tp @a 0 102 0
-setworldspawn 0 100 0
-worldborder center 0 0
-worldborder set 1000
+
+scoreboard objectives add Global dummy
+scoreboard players set SpawnX Global 0
+scoreboard players set SpawnZ Global 0
+scoreboard players set Rand Global 0
+scoreboard players set Buffer Global 0
+
+scoreboard players set #2 Global 2
+scoreboard players set #0 Global 2
+
+scoreboard players set SizeMap Global 1000
+scoreboard players set SizeMap2 0
+scoreboard players operation SizeMap2 Global = SizeMap Global
+scoreboard players operation SizeMap2 Global *= #2 Global
+
+
+scoreboard players set TpX Global 0
+scoreboard players set TpZ Global 0
 
 # Mise à jour des Gamerules
 gamerule doDaylightCycle false
@@ -95,9 +102,7 @@ bossbar set time name [{"text": "Episode ", "color": "gold"}, {"score": {"name":
 
 difficulty peaceful
 
-# Ajout de l'UHC Armor Stand
-kill @e[name=UHC,type=minecraft:armor_stand]
-summon armor_stand 0 100.8 0 {Invisible:1b,Invulnerable:1b,PersistenceRequired:1b,NoGravity:1b,Small:1b,ArmorItems:[{},{},{},{id:"minecraft:sea_lantern",Count:1b}],HandItems:[{},{}],CustomName:"{\"text\":\"UHC\",\"color\":\"red\",\"bold\":\"true\"}",CustomNameVisible:1b,DisabledSlots:2035728}
+
 
 # Affichage texte de fin
 tellraw @a [{"text":"[", "color": "red"}, {"text":"UHC", "color": "gold", "bold": "true"}, {"text":"]", "color": "red"}, {"text": " UHC initialisé avec succès!", "color": "gold"}]
