@@ -6,17 +6,20 @@ scoreboard players set SpawnZ Global 0
 scoreboard players set Rand Global 0
 scoreboard players set Buffer Global 0
 
+scoreboard players set #1 Global 1
 scoreboard players set #2 Global 2
-scoreboard players set #0 Global 2
+
 
 scoreboard players set SizeMap Global 1000
 scoreboard players set SizeMap2 0
 scoreboard players operation SizeMap2 Global = SizeMap Global
 scoreboard players operation SizeMap2 Global *= #2 Global
+scoreboard players operation SizeMap2 Global += #1 Global
 
 
-scoreboard players set TpX Global 0
-scoreboard players set TpZ Global 0
+scoreboard objectives add TpX dummy
+scoreboard objectives add TpZ dummy
+
 
 # Mise à jour des Gamerules
 gamerule doDaylightCycle false
