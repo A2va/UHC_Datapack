@@ -12,4 +12,3 @@ execute if score inGame info matches 1 run function uhc:title
 execute if score inGame info matches 1 run function uhc:spec_in_game
 
 # Toujours activer
-execute as @e[type=area_effect_cloud,tag=tp,nbt={Age:1}] at @s run function uhc:tp/kill
