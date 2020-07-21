@@ -16,7 +16,7 @@ gamemode survival @a[gamemode=adventure]
 playsound minecraft:entity.enderman.teleport master @a 0 100 0 1 1 1
 effect give @a minecraft:resistance 20 125 true
 effect give @a[gamemode=survival] minecraft:blindness 3 125 true
-tellraw @a [{"text":"[", "color": "red"}, {"text":"UHC", "color": "gold", "bold": "true"}, {"text":"]", "color": "red"}, {"text": " Démarage de la partie! Puisse le sort vous être favorable!", "color": "gold"}]
+tellraw @a [{"text":"[", "color": "red"}, {"text":"UHC", "color": "gold", "bold": true}, {"text":"]", "color": "red"}, {"text": " Démarage de la partie! Puisse le sort vous être favorable!", "color": "gold"}]
 clear @a
 
 scoreboard objectives remove join_white
