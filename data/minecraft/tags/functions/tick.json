@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-  	"uhc:test_in_game"
+    "uhc:test_in_game",
+    "border:main"
 	]
 }

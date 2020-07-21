@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-  "uhc:init"
+  "uhc:init",
+  "border:init"
 	]
 }

@@ -8,8 +8,10 @@ team join Spectateur @a[scores={spec=1}]
 scoreboard players remove @a[scores={spec=1}] spec 1
 
 team empty Waiting
-execute if score team option matches 0 run spreadplayers 0 0 200 500 false @a[gamemode=adventure]
-execute if score team option matches 1 run spreadplayers 0 0 200 500 true @a[gamemode=adventure]
+execute if score team option matches 0 as @a[gamemode=adventure] run function uhc:tp/spreadplayers
+execute if score team option matches 1 run say "Not impltented yet"
+#execute if score team option matches 0 run spreadplayers 0 0 200 500 false @a[gamemode=adventure]
+#execute if score team option matches 1 run spreadplayers 0 0 200 500 true @a[gamemode=adventure]
 gamemode survival @a[gamemode=adventure]
 playsound minecraft:entity.enderman.teleport master @a 0 100 0 1 1 1
 effect give @a minecraft:resistance 20 125 true
