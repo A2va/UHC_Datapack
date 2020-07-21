@@ -11,7 +11,7 @@ scoreboard players set #2 Global 2
 
 
 scoreboard players set SizeMap Global 1000
-scoreboard players set SizeMap2 0
+scoreboard players set SizeMap2 Global 0
 scoreboard players operation SizeMap2 Global = SizeMap Global
 scoreboard players operation SizeMap2 Global *= #2 Global
 scoreboard players operation SizeMap2 Global += #1 Global
@@ -108,4 +108,4 @@ difficulty peaceful
 
 
 # Affichage texte de fin
-tellraw @a [{"text":"[", "color": "red"}, {"text":"UHC", "color": "gold", "bold": "true"}, {"text":"]", "color": "red"}, {"text": " UHC initialisé avec succès!", "color": "gold"}]
+tellraw @a [{"text":"[", "color": "red"}, {"text":"UHC", "color": "gold", "bold": true}, {"text":"]", "color": "red"}, {"text": " UHC initialisé avec succès!", "color": "gold"}]
